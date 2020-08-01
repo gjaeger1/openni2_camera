@@ -273,7 +273,7 @@ void OpenNI2Device::startIRStream()
 
 void OpenNI2Device::startColorStream()
 {
-  std::cout << "Start Color Stream\n";
+
   boost::shared_ptr<openni::VideoStream> stream = getColorVideoStream();
 
   if (stream)

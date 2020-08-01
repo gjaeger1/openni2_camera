@@ -20,8 +20,6 @@ if (NOT PC_OPENNI2_FOUND)
   pkg_check_modules(PC_OPENNI2 REQUIRED openni2)
 endif()
 
-message("OpenNI2 libraries to link: ${PC_OPENNI2_LIBRARIES}") 
-
 include_directories(
   include
   ${Boost_INCLUDE_DIRS}
@@ -40,8 +38,6 @@ add_library(openni2_wrapper SHARED
   src/openni2_exception.cpp
   src/openni2_video_mode.cpp
 )
-
-#rclcpp_components_register_nodes(openni2_wrapper "openni2_wrapper::OpenNI2Driver")
 
 target_link_libraries(openni2_wrapper
   ${Boost_LIBRARIES}
